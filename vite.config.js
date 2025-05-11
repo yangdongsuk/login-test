@@ -11,6 +11,15 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
       },
+      "/api/connect": {
+        target: "https://dev.okii.kr",
+        changeOrigin: true,
+        secure: false,
+        ws: true,
+      },
     },
+  },
+  define: {
+    global: "globalThis",
   },
 });
