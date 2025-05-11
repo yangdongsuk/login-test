@@ -62,12 +62,6 @@ function StompTest() {
             console.error("에러 메시지 파싱 오류:", e);
           }
         });
-
-        // 입장 메시지 전송
-        client.publish({
-          destination: `/app/room/${roomKey}/enter`,
-          body: "{}",
-        });
       },
       onDisconnect: () => {
         console.log("웹소켓 연결 해제");
